@@ -1,16 +1,17 @@
 name: EPG Auto Update
 
 on:
-  push: # 允许手动或推送时触发
+  push:
+    branches: [ main ]
   schedule:
-    - cron: '0 */2 * * *' # 每2小时自动运行一次
-  workflow_dispatch: # 允许在Actions页面手动点击运行
+    - cron: '0 */2 * * *' # 每2小时运行一次
+  workflow_dispatch: # 允许手动触发
 
 jobs:
   update-epg:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 声明需要写入权限，与仓库设置双重保障
+      contents: write # 确保有写入权限
 
     steps:
       - name: Checkout repository
@@ -21,15 +22,28 @@ jobs:
           # 1. 删除可能存在的旧文件
           rm -f pp.xml pp.xml.gz
           
-          # 2. 抓取最新的 pp.xml 文件
-          wget https://epg.112114.xyz/pp.xml -O pp.xml[reference:5]
+          # 2. 使用 curl 下载文件
+          # -L 跟随重定向
+          # -A 伪装成普通浏览器，防止被源站防火墙拦截
+          # --retry 3 失败重试3次
+          echo "正在下载 pp.xml..."
+          curl -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" --retry 3 --retry-delay 5 -o pp.xml "https://epg.112114.xyz/pp.xml"
           
-          # 3. 将文件压缩为 pp.xml.gz，并保留原文件
+          # 3. 检查文件是否下载成功且内容不为空 (-s 判断文件大小是否大于0)
+          if [ ! -s pp.xml ]; then
+            echo "❌ 错误: 下载失败或文件为空，请检查源站状态。"
+            exit 1
+          fi
+          
+          # 4. 压缩文件 (保留原文件)
+          echo "正在压缩 pp.xml..."
           gzip -k pp.xml
           
-          # 4. 配置Git并提交两个文件
+          # 5. 配置 Git 并提交更新
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add pp.xml pp.xml.gz
-          git commit -m "Auto-update EPG files (pp.xml & pp.xml.gz)" || exit 0
+          
+          # 如果没有文件变动，commit 会报错，加上 || exit 0 防止 Action 失败
+          git commit -m "Auto-update EPG files: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
           git push
