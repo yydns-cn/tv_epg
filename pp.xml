@@ -17721,6 +17721,9 @@
 	<programme channel="咪咕综合体育" start="20261113190000 +0800" stop="20261113203000 +0800">
 		<title lang="zh">绿茵狂想联赛季 第13期 直播</title>
 	</programme>
+	<programme channel="咪咕综合体育" start="20261113203500 +0800" stop="20261113221500 +0800">
+		<title lang="zh">中超来噜-2026赛季中超 第30轮 大连英博海发-天津津门虎</title>
+	</programme>
 	<channel id="咪咕足球">
 		<display-name lang="zh">咪咕足球</display-name>
 	</channel>
@@ -17795,6 +17798,9 @@
 	</programme>
 	<programme channel="咪咕足球" start="20261113185000 +0800" stop="20261113202500 +0800">
 		<title lang="zh">当燃CBA-26/27赛季常规赛第6轮 浙江稠州金租-上海久事</title>
+	</programme>
+	<programme channel="咪咕足球" start="20261113203500 +0800" stop="20261113221000 +0800">
+		<title lang="zh">当燃CBA-26/27赛季常规赛第8轮 北京首钢-宁波町渥</title>
 	</programme>
 	<channel id="四大名著剧场">
 		<display-name lang="zh">四大名著剧场</display-name>
@@ -58854,6 +58860,9 @@
 	<programme channel="newtv超级综艺" start="20261113193800 +0800" stop="20261113211800 +0800">
 		<title lang="zh">笑有新生</title>
 	</programme>
+	<programme channel="newtv超级综艺" start="20261113211800 +0800" stop="20261113223500 +0800">
+		<title lang="zh">你好时光 第二季</title>
+	</programme>
 	<channel id="newtv超级体育">
 		<display-name lang="zh">NEWTV超级体育</display-name>
 	</channel>
@@ -58911,6 +58920,15 @@
 	<programme channel="newtv超级体育" start="20261113175500 +0800" stop="20261113201500 +0800">
 		<title lang="zh">2026/2027赛季速度滑冰世界杯(中国站)-男子1000米决赛等</title>
 	</programme>
+	<programme channel="newtv超级体育" start="20261113201500 +0800" stop="20261113203500 +0800">
+		<title lang="zh">实况录像-精彩一刻-2026年蹦床世界杯 意大利里乔内站 中国队两金一银</title>
+	</programme>
+	<programme channel="newtv超级体育" start="20261113203500 +0800" stop="20261113213000 +0800">
+		<title lang="zh">篮球公园</title>
+	</programme>
+	<programme channel="newtv超级体育" start="20261113213000 +0800" stop="20261113223500 +0800">
+		<title lang="zh">体育世界</title>
+	</programme>
 	<channel id="newtv超级电影">
 		<display-name lang="zh">NEWTV超级电影</display-name>
 	</channel>
@@ -58955,6 +58973,9 @@
 	</programme>
 	<programme channel="newtv超级电影" start="20261113192700 +0800" stop="20261113205300 +0800">
 		<title lang="zh">宗师</title>
+	</programme>
+	<programme channel="newtv超级电影" start="20261113205300 +0800" stop="20261113223400 +0800">
+		<title lang="zh">画江湖之天罡</title>
 	</programme>
 	<channel id="newtv超级电视剧">
 		<display-name lang="zh">NEWTV超级电视剧</display-name>
@@ -59036,6 +59057,15 @@
 	</programme>
 	<programme channel="newtv超级电视剧" start="20261113191400 +0800" stop="20261113195900 +0800">
 		<title lang="zh">06_纯真年代的爱情</title>
+	</programme>
+	<programme channel="newtv超级电视剧" start="20261113195900 +0800" stop="20261113204400 +0800">
+		<title lang="zh">07_纯真年代的爱情</title>
+	</programme>
+	<programme channel="newtv超级电视剧" start="20261113204400 +0800" stop="20261113213000 +0800">
+		<title lang="zh">08_纯真年代的爱情</title>
+	</programme>
+	<programme channel="newtv超级电视剧" start="20261113213000 +0800" stop="20261113221100 +0800">
+		<title lang="zh">09_爱拼会赢（4K）</title>
 	</programme>
 	<channel id="newtv精品大剧">
 		<display-name lang="zh">NEWTV精品大剧</display-name>
@@ -59672,6 +59702,18 @@
 	</programme>
 	<programme channel="newtv金牌综艺" start="20261113190000 +0800" stop="20261113194500 +0800">
 		<title lang="zh">38_无间</title>
+	</programme>
+	<programme channel="newtv金牌综艺" start="20261113194500 +0800" stop="20261113201500 +0800">
+		<title lang="zh">珍膳私享特膳粉第5期</title>
+	</programme>
+	<programme channel="newtv金牌综艺" start="20261113201500 +0800" stop="20261113210000 +0800">
+		<title lang="zh">39_无间</title>
+	</programme>
+	<programme channel="newtv金牌综艺" start="20261113210000 +0800" stop="20261113213000 +0800">
+		<title lang="zh">珍膳私享特膳粉第5期</title>
+	</programme>
+	<programme channel="newtv金牌综艺" start="20261113213000 +0800" stop="20261113221600 +0800">
+		<title lang="zh">40_无间</title>
 	</programme>
 	<channel id="newtv精品体育">
 		<display-name lang="zh">NEWTV精品体育</display-name>
